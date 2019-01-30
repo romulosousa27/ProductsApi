@@ -14,8 +14,6 @@ class ProductController extends Controller
     public function __construct(Product $product) {
 
         $this->product = $product;
-        
-        header('Acces-Control-Allow-Origin: *');
     }
 
     /**
@@ -27,7 +25,7 @@ class ProductController extends Controller
     {
         $products = $this->product->all();
 
-        return response()->json($products);
+        return response()->json($products, 200);
     }
 
     /**
@@ -46,7 +44,7 @@ class ProductController extends Controller
             return response()->json(['Não foi possivel criar o produto', 400]);
         }
 
-        return response()->json($product);
+        return response()->json($product, 201);
     }
 
     /**
@@ -63,7 +61,7 @@ class ProductController extends Controller
             return response()->json('O produto não existe', 400);
         }
 
-        return response()->json($product);
+        return response()->json($product, 200);
     }
 
 
@@ -76,7 +74,17 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       
+       $product = $this->product->find($id);
+       
+        if(!$product) {
+            return response()->json('Produto não existe');
+        }
+        
+        $data = $request->all();
+        $result = $this->product->update($data);
+        
+        return response()->json('Produto editado com sucesso');
     }
 
     /**
@@ -87,6 +95,14 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = $this->product->find($id);
+
+        if (!$product) {
+            return response()->json('O produto não existe', 400);
+        }
+        
+        $product->delete();
+
+        return response()->json('Produto Deletado', 200);
     }
 }
