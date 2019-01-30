@@ -1,11 +1,14 @@
-@case('view')
-@include($view)
-@break
+<?php
 
+namespace App\Models;
 
-$inputs [] = [
-            'name' => 'groups',
-            'label' => 'Condições',
-            'type' => 'view',
-            'view' => 'brand.motorcycle.variations.financing.field-groups'
-        ];
+use Illuminate\Database\Eloquent\Model;
+
+class Product extends Model
+{
+    
+    protected $fillable = [
+        'name', 'description', 'price', 'quantity'
+    ];
+    
+}
