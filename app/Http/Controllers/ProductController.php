@@ -25,7 +25,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = $this->product->all();
+
+        return response()->json($products);
     }
 
     /**
@@ -55,7 +57,13 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = $this->product->find($id);
+
+        if (!$product) {
+            return response()->json('O produto não existe', 400);
+        }
+
+        return response()->json($product);
     }
 
 
