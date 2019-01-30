@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "d40e0b69-8c58-479f-ab90-9a1390c05d6c",
+		"name": "Laravel Api Produtos",
+		"description": "Api de produtos\n\nurl: http://devmedia-laravel-api.test/",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://devmedia-laravel-api.test/api/product",
+					"protocol": "http",
+					"host": [
+						"devmedia-laravel-api",
+						"test"
+					],
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "X-Requested-With",
+						"type": "text",
+						"value": "XMLHttpRequest"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://devmedia-laravel-api.test/api/product/3",
+					"protocol": "http",
+					"host": [
+						"devmedia-laravel-api",
+						"test"
+					],
+					"path": [
+						"api",
+						"product",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Arroz",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Tipo Z",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "12.88",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "25",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://devmedia-laravel-api.test/api/product",
+					"protocol": "http",
+					"host": [
+						"devmedia-laravel-api",
+						"test"
+					],
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Requested-With",
+						"type": "text",
+						"value": "XMLHttpRequest"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Arroz",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Tipo Z",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "12.88",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "25",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://devmedia-laravel-api.test/api/product/1",
+					"protocol": "http",
+					"host": [
+						"devmedia-laravel-api",
+						"test"
+					],
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"type": "text",
+						"value": "XMLHttpRequest"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Arroz Editado",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Tipo A Editado",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "12.88",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "put",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://devmedia-laravel-api.test/api/product/1",
+					"protocol": "http",
+					"host": [
+						"devmedia-laravel-api",
+						"test"
+					],
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "36581e70-54e0-498c-889a-9e60bbbf5d0a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "fab6d771-b8a1-43dc-b842-419cbbe56cc9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
