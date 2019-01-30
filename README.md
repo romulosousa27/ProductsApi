@@ -2,6 +2,7 @@ Criaçao  de um api para Produtos
 
 
 Rotas
+```
 +--------+-----------+----------------------------+-----------------+------------------------------------------------+------------+
 | Domain | Method    | URI                        | Name            | Action                                         | Middleware |
 +--------+-----------+----------------------------+-----------------+------------------------------------------------+------------+
@@ -14,6 +15,7 @@ Rotas
 |        | DELETE    | api/product/{product}      | product.destroy | App\Http\Controllers\ProductController@destroy | api        |
 |        | GET|HEAD  | api/product/{product}/edit | product.edit    | App\Http\Controllers\ProductController@edit    | api        |
 +--------+-----------+----------------------------+-----------------+------------------------------------------------+------------+
+```
 
 Ao clonar o projeto siga os seguintes passos
 - Composer install
