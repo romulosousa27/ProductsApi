@@ -23,7 +23,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = $this->product->all();
+        $products = $this->product->paginate();
 
         return response()->json($products, 200);
     }
@@ -84,7 +84,7 @@ class ProductController extends Controller
         $data = $request->all();
         $result = $this->product->update($data);
         
-        return response()->json('Produto editado com sucesso');
+        return response()->json('Produto editado com sucesso', 204);
     }
 
     /**
