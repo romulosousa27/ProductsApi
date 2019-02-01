@@ -26,8 +26,21 @@ class ProductRequest extends FormRequest
         return [
             'name' => 'required',
             'description' => 'required',
-            'price' => 'required',
-            'quantity' => 'required|numeric'
+            'price' => 'required|min:0',
+            'quantity' => 'required|numeric|min:0'
+        ];
+    }
+
+    public function messages() {
+
+        return [
+            'name.required' => 'Digite um nome',
+            'description.required' => 'Digite uma Descrição',
+            'price.required' => 'Digite um Preço',
+            'price.min' => 'O Preço minimo é Zero',
+            'quantity.required' => 'Digite um Quantidade',
+            'quantity.numeric' => 'Esse campo é numerico',
+            'quantity.min' => 'A Quantidade minima é Zero',
         ];
     }
 }
