@@ -21,3 +21,4 @@ Ao clonar o projeto siga os seguintes passos
 - Composer install
 - Crie o arquivo .env
 - Gerar a chave da aplicaçao: `php artisan key:generate`
+- URL: `laravel-api.test/api/product`
